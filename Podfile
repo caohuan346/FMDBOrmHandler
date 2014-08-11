@@ -1,3 +1,3 @@
-platform :ios
+platform :ios, '6.0'
 pod 'FMDB'
-pod 'GHUnit', '~> 0.5.9'
+pod 'GHUnit'
