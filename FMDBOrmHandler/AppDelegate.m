@@ -7,11 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "DataBaseHandler.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[DataBaseHandler sharedInstance] createDb];
     // Override point for customization after application launch.
     return YES;
 }

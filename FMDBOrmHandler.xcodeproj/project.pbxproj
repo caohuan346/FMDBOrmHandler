@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		599F85971999A025000326D8 /* BaseDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 599F85911999A025000326D8 /* BaseDao.m */; };
+		599F85981999A025000326D8 /* DataBaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 599F85931999A025000326D8 /* DataBaseHandler.m */; };
+		599F85991999A025000326D8 /* NSObject+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 599F85961999A025000326D8 /* NSObject+Property.m */; };
 		59AE5B521998EE3100DC217E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AE5B511998EE3100DC217E /* Foundation.framework */; };
 		59AE5B541998EE3100DC217E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AE5B531998EE3100DC217E /* CoreGraphics.framework */; };
 		59AE5B561998EE3100DC217E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AE5B551998EE3100DC217E /* UIKit.framework */; };
@@ -21,6 +24,7 @@
 		59AE5B731998EE3100DC217E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AE5B551998EE3100DC217E /* UIKit.framework */; };
 		59AE5B7B1998EE3100DC217E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59AE5B791998EE3100DC217E /* InfoPlist.strings */; };
 		59AE5B7D1998EE3100DC217E /* FMDBOrmHandlerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE5B7C1998EE3100DC217E /* FMDBOrmHandlerTests.m */; };
+		818619EE609448CCABD21E6C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D776C69E06C44E468A6F3AC3 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		599F85901999A025000326D8 /* BaseDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDao.h; sourceTree = "<group>"; };
+		599F85911999A025000326D8 /* BaseDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDao.m; sourceTree = "<group>"; };
+		599F85921999A025000326D8 /* DataBaseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseHandler.h; sourceTree = "<group>"; };
+		599F85931999A025000326D8 /* DataBaseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseHandler.m; sourceTree = "<group>"; };
+		599F85941999A025000326D8 /* DBModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBModelProtocol.h; sourceTree = "<group>"; };
+		599F85951999A025000326D8 /* NSObject+Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Property.h"; sourceTree = "<group>"; };
+		599F85961999A025000326D8 /* NSObject+Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Property.m"; sourceTree = "<group>"; };
 		59AE5B4E1998EE3100DC217E /* FMDBOrmHandler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMDBOrmHandler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59AE5B511998EE3100DC217E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		59AE5B531998EE3100DC217E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +64,8 @@
 		59AE5B781998EE3100DC217E /* FMDBOrmHandlerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FMDBOrmHandlerTests-Info.plist"; sourceTree = "<group>"; };
 		59AE5B7A1998EE3100DC217E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		59AE5B7C1998EE3100DC217E /* FMDBOrmHandlerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBOrmHandlerTests.m; sourceTree = "<group>"; };
+		CFD0E171C34E4038B2929B29 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D776C69E06C44E468A6F3AC3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +76,7 @@
 				59AE5B541998EE3100DC217E /* CoreGraphics.framework in Frameworks */,
 				59AE5B561998EE3100DC217E /* UIKit.framework in Frameworks */,
 				59AE5B521998EE3100DC217E /* Foundation.framework in Frameworks */,
+				818619EE609448CCABD21E6C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,13 +93,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		599F858E1999A025000326D8 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				599F858F1999A025000326D8 /* FMDBOrmHandler */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		599F858F1999A025000326D8 /* FMDBOrmHandler */ = {
+			isa = PBXGroup;
+			children = (
+				599F85901999A025000326D8 /* BaseDao.h */,
+				599F85911999A025000326D8 /* BaseDao.m */,
+				599F85921999A025000326D8 /* DataBaseHandler.h */,
+				599F85931999A025000326D8 /* DataBaseHandler.m */,
+				599F85941999A025000326D8 /* DBModelProtocol.h */,
+				599F85951999A025000326D8 /* NSObject+Property.h */,
+				599F85961999A025000326D8 /* NSObject+Property.m */,
+			);
+			path = FMDBOrmHandler;
+			sourceTree = "<group>";
+		};
 		59AE5B451998EE3100DC217E = {
 			isa = PBXGroup;
 			children = (
+				599F858E1999A025000326D8 /* src */,
 				59AE5B571998EE3100DC217E /* FMDBOrmHandler */,
 				59AE5B761998EE3100DC217E /* FMDBOrmHandlerTests */,
 				59AE5B501998EE3100DC217E /* Frameworks */,
 				59AE5B4F1998EE3100DC217E /* Products */,
+				CFD0E171C34E4038B2929B29 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +143,7 @@
 				59AE5B531998EE3100DC217E /* CoreGraphics.framework */,
 				59AE5B551998EE3100DC217E /* UIKit.framework */,
 				59AE5B701998EE3100DC217E /* XCTest.framework */,
+				D776C69E06C44E468A6F3AC3 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59AE5B801998EE3100DC217E /* Build configuration list for PBXNativeTarget "FMDBOrmHandler" */;
 			buildPhases = (
+				2022EDB0F09645008B2E0E1D /* Check Pods Manifest.lock */,
 				59AE5B4A1998EE3100DC217E /* Sources */,
 				59AE5B4B1998EE3100DC217E /* Frameworks */,
 				59AE5B4C1998EE3100DC217E /* Resources */,
+				E2386E05748E43F4B037950C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,14 +285,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2022EDB0F09645008B2E0E1D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E2386E05748E43F4B037950C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		59AE5B4A1998EE3100DC217E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				59AE5B681998EE3100DC217E /* ViewController.m in Sources */,
+				599F85981999A025000326D8 /* DataBaseHandler.m in Sources */,
 				59AE5B621998EE3100DC217E /* AppDelegate.m in Sources */,
 				59AE5B5E1998EE3100DC217E /* main.m in Sources */,
+				599F85991999A025000326D8 /* NSObject+Property.m in Sources */,
+				599F85971999A025000326D8 /* BaseDao.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +450,7 @@
 		};
 		59AE5B811998EE3100DC217E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFD0E171C34E4038B2929B29 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -386,6 +464,7 @@
 		};
 		59AE5B821998EE3100DC217E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFD0E171C34E4038B2929B29 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -456,6 +535,7 @@
 				59AE5B821998EE3100DC217E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		59AE5B831998EE3100DC217E /* Build configuration list for PBXNativeTarget "FMDBOrmHandlerTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +544,7 @@
 				59AE5B851998EE3100DC217E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

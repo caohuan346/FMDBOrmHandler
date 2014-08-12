@@ -1,0 +1,17 @@
+PODS:
+  - FMDB (2.3):
+    - FMDB/standard
+  - FMDB/common (2.3)
+  - FMDB/standard (2.3):
+    - FMDB/common
+  - GHUnit (0.5.9)
+
+DEPENDENCIES:
+  - FMDB
+  - GHUnit
+
+SPEC CHECKSUMS:
+  FMDB: 31ec26773c7f7b7890a6038235a1f2bbd933a7cb
+  GHUnit: 4ea5a83295587ab226c458fc30dfdb1616fba633
+
+COCOAPODS: 0.33.1
