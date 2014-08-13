@@ -18,9 +18,6 @@
 
 @interface NSObject (Property)
 
-- (NSString *)tableSql:(NSString *)tablename;
-- (NSString *)tableSql;
-
 - (NSDictionary *)convertDictionary;
 - (id)initWithDictionary:(NSDictionary *)dict;
 - (NSString *)className;

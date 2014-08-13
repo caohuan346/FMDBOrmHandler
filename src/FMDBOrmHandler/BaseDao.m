@@ -234,7 +234,7 @@ const static NSString* blobTypeString = @"NSDataUIImage";
 
 //根据条件bean创建where条件sql段
 -(NSString *)generateWhereSQLByConditionDic:(NSDictionary *)conditionDic{
-    //组装条件
+
     NSMutableString *conditionSql = [NSMutableString stringWithFormat:@" where 1=1 "];
     
     NSInteger i = 0;
@@ -283,14 +283,14 @@ const static NSString* blobTypeString = @"NSDataUIImage";
         i++;
     }
     [sql appendString:@") values ("];
- 
+    
     i=0;
     for (NSString *property in propertyArray) {
-
+        
         if (primaryKey && [property isEqualToString:primaryKey]) {
             continue;
         }
-
+        
         //id value = [model dangerousValueForKey:property];
         id value = [model safetyValueForKey:property];
         
@@ -404,11 +404,11 @@ const static NSString* blobTypeString = @"NSDataUIImage";
     NSMutableString *orderSql = [NSMutableString stringWithFormat:@" order by "];//排序部分sql
     if (beanArray) {
         
-        //组装条件段
+        //where part
         NSString *whereSql = [self generateWhereSQLByConditionBeanArray:beanArray];
         [sql appendString:whereSql];
         
-        //组装排序段
+        //order part
         //select * from AppMessage where 1=1 and msgId<>'21' , order by  msgId asc  sendDate desc
         NSInteger i = 0;
         for (ConditionBean *condition in beanArray) {
@@ -588,7 +588,7 @@ const static NSString* blobTypeString = @"NSDataUIImage";
         
         NSMutableArray *argArray = [NSMutableArray array];
         
-        //追加字段
+        //append field
         NSInteger i = 0;
         for (NSString *field in dictionary.allKeys) {
             if (i>0) {
@@ -805,7 +805,6 @@ const static NSString* blobTypeString = @"NSDataUIImage";
     
     NSLog(@"条件更新sql:%@",sql);
     
-    //执行
     __block BOOL executeResult;
     [[DataBaseHandler sharedInstance].fmdbQueue inDatabase:^(FMDatabase *db) {
         [db open];
@@ -905,18 +904,18 @@ const static NSString* blobTypeString = @"NSDataUIImage";
     
     /*
      NSMutableString *sql = [NSMutableString stringWithFormat:@"delete from %@ where 1=1 ",tableName];
-    if (model) {
-        //loop all property
-        NSArray *columnArray = [model propertyArray];
-        for (NSString *field in columnArray) {
-            
-            id value = [model safetyValueForKey:field];
-            
-            if (value!=nil) {
-                [sql appendFormat:@" and %@ = '%@' ",field,value];
-            }
-        }
-    }
+     if (model) {
+     //loop all property
+     NSArray *columnArray = [model propertyArray];
+     for (NSString *field in columnArray) {
+     
+     id value = [model safetyValueForKey:field];
+     
+     if (value!=nil) {
+     [sql appendFormat:@" and %@ = '%@' ",field,value];
+     }
+     }
+     }
      */
     
     NSMutableString *sql = [NSMutableString stringWithFormat:@"delete from %@ ",tableName];
@@ -961,7 +960,7 @@ const static NSString* blobTypeString = @"NSDataUIImage";
             [db close];
             return ;
         }
-       
+        
         array = [self handleResult:rs dbModel:model];
         
         [db close];
@@ -1020,7 +1019,7 @@ const static NSString* blobTypeString = @"NSDataUIImage";
                 NSString *propertyType = propertyTypeArray[i];
                 
                 NSObject *columnValue;
-
+                
                 if([@"intfloatdoublelongcharshort" rangeOfString:propertyType].location != NSNotFound){
                     columnValue = [NSNumber numberWithDouble:[rs doubleForColumn:propertyName]];
                 }
@@ -1050,9 +1049,9 @@ const static NSString* blobTypeString = @"NSDataUIImage";
         //loop all properties
         NSArray *columnArray = [conditionModel propertyArray];
         for (NSString *field in columnArray) {
-
+            
             id value = [conditionModel safetyValueForKey:field];
-
+            
             if (value!=nil) {
                 [sql appendFormat:@" and %@ = '%@' ",field,value];
             }

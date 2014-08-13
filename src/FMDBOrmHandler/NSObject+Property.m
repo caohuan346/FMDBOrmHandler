@@ -27,28 +27,8 @@
     return propertyArray;
 }
 
-- (NSString *)tableSql:(NSString *)tablename{
-    NSMutableString *sql = [[NSMutableString alloc] init];
-    NSArray *array = [self propertyArray];
-    [sql appendFormat:@"create table %@ (",tablename] ;
-    NSInteger i = 0;
-    for (NSString *key in array) {
-        if (i>0) {
-            [sql appendString:@","];
-        }
-        [sql appendFormat:@"%@ text",key];
-        i++;
-    }
-    [sql appendString:@")"];
-    return sql;
-}
-
-- (NSString *)tableSql{
-    return [self tableSql:[self className]];
-}
- 
-
-- (NSDictionary *)convertDictionary{
+- (NSDictionary *)convertDictionary
+{
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     NSArray *propertyList = [self propertyArray];
     for (NSString *key in propertyList) {
@@ -66,7 +46,8 @@
     }
     return dict;
 }
-- (id)initWithDictionary:(NSDictionary *)dict{
+- (id)initWithDictionary:(NSDictionary *)dict
+{
     self = [self init];
     if(self)
         [self dictionaryForObject:dict];
@@ -77,7 +58,8 @@
     return [NSString stringWithUTF8String:object_getClassName(self)];
 }
 
-- (BOOL)checkPropertyName:(NSString *)name {
+- (BOOL)checkPropertyName:(NSString *)name
+{
     unsigned int propCount, i;
     objc_property_t* properties = class_copyPropertyList([self class], &propCount);
     for (i = 0; i < propCount; i++) {
@@ -94,7 +76,8 @@
 }
 
 
-- (void)dictionaryForObject:(NSDictionary*) dict{
+- (void)dictionaryForObject:(NSDictionary*) dict
+{
     for (NSString *key in [dict allKeys]) {
         id value = [dict objectForKey:key];
         
@@ -206,19 +189,18 @@
     return propertyDictionary;
 }
 
-- (id)safetyValueForKey:(NSString*)key{
+- (id)safetyValueForKey:(NSString*)key
+{
     id value = [self valueForKey:key];
     if(value == nil)
     {
         return @"";
     }
-//    if([value intValue] == 0){
-//        value = nil;
-//    }
     return value;
 }
 
-- (id)dangerousValueForKey:(NSString*)key{
+- (id)dangerousValueForKey:(NSString*)key
+{
     SEL selector = NSSelectorFromString(key);
     
 #pragma clang diagnostic push
@@ -226,7 +208,7 @@
     id value = [self performSelector:selector];
 #pragma clang diagnostic pop
     
-    if (value==nil) {
+    if (value == nil) {
         value = @"";
     }
     return value;
@@ -239,7 +221,7 @@ const static NSString* intTypesString = @"intcharshort";
 const static NSString* dateTypeString = @"NSDate";
 const static NSString* blobTypeString = @"NSDataUIImage";
 
-+(NSString *)sqlliteTypeWithPropertyType:(NSString *)type
++ (NSString *)sqlliteTypeWithPropertyType:(NSString *)type
 {
     if([intTypesString rangeOfString:type].location != NSNotFound){
         return K_SQLTYPE_Int;

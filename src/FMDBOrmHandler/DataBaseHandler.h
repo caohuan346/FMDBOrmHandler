@@ -20,8 +20,11 @@
 }
 
 @property (nonatomic, assign) BOOL state;
+
 @property (nonatomic, strong) FMDatabase *database;
+
 @property (nonatomic, strong) FMDatabaseQueue  *fmdbQueue;
+
 @property (nonatomic, strong) NSOperationQueue  *queue;
 
 //singleton
@@ -29,5 +32,7 @@ SYNTHESIZE_SINGLETON_FOR_HEADER(DataBaseHandler)
 
 //
 - (BOOL)createDb;
+
+- (void)handleDbUpdate;
 
 @end

@@ -48,10 +48,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataBaseHandler)
 
 #pragma mark Customized:General
 
-/*
 //local db update handle
 - (void)handleDbUpdate {
-    
+    /*
 	NSString *allConfigFilePath = [PathService pathForAllConfigFile];
     
 	if ([[NSFileManager defaultManager] fileExistsAtPath:allConfigFilePath]) {
@@ -69,8 +68,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataBaseHandler)
             
         }
 	}
-
+     */
 }
-*/
+
 
 @end
