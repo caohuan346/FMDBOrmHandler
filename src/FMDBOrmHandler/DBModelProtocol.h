@@ -1,6 +1,6 @@
 //
 //  DBModelProtocol.h
-//  XMPPBaseProject
+//  FMDBOrmHandler
 //
 //  Created by hc on 14-7-3.
 //  Copyright (c) 2014年 hc. All rights reserved.

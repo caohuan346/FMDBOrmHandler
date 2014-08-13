@@ -1,9 +1,9 @@
 //
 //  NSObject+Property.m
-//  XMPPBaseProject
+//  FMDBOrmHandler
 //
-//  Created by caohuan on 13-11-18.
-//  Copyright (c) 2013年 hc. All rights reserved.
+//  Created by caohuan on 14-07-05.
+//  Copyright (c) 2014年 hc. All rights reserved.
 //
 
 #import "NSObject+Property.h"

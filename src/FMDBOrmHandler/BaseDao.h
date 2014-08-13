@@ -1,6 +1,6 @@
 //
 //  BaseDBManager.h
-//  XMPPBaseProject
+//  FMDBOrmHandler
 //
 //  Created by hc on 14-07-05.
 //  Copyright (c) 2014年 hc. All rights reserved.

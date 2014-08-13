@@ -1,9 +1,9 @@
 //
 //  DBCenter.h
-//  XMPPBaseProject
+//  FMDBOrmHandler
 //
-//  Created by hc on 13-9-11.
-//  Copyright (c) 2013年 hc. All rights reserved.
+//  Created by hc on 14-07-05.
+//  Copyright (c) 2014年 hc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
